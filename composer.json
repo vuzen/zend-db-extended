@@ -1,4 +1,5 @@
 
+{
     "name": "vuzen/zend-db-extended",
     "description": "ZendDB with relations, scopes and finders.",
     "license": "BSD-3-Clause",
