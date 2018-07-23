@@ -11,7 +11,7 @@
     "support": {
         "issues": "https://github.com/vuzen/zend-db-extended/issues",
         "source": "https://github.com/vuzen/zend-db-extended",
-        "rss": "https://github.com/vuzen/zend-db-extended/releases.atom",
+        "rss": "https://github.com/vuzen/zend-db-extended/releases.atom"
     },
     "require": {
         "php": "^5.6 || ^7.0",
