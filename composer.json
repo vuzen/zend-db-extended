@@ -1,0 +1,71 @@
+
+    "name": "vuzen/zend-db-extended",
+    "description": "ZendDB with relations, scopes and finders.",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "zf",
+        "zendframework",
+        "db",
+        "vuzen"
+    ],
+    "support": {
+        "issues": "https://github.com/vuzen/zend-db-extended/issues",
+        "source": "https://github.com/vuzen/zend-db-extended",
+        "rss": "https://github.com/vuzen/zend-db-extended/releases.atom",
+    },
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-db": "^2.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7.25 || ^6.4.4",
+        "zendframework/zend-coding-standard": "~1.0.0",
+        "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+        "zendframework/zend-hydrator": "^1.1 || ^2.1",
+        "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3"
+    },
+    "suggest": {
+        "zendframework/zend-eventmanager": "Zend\\EventManager component",
+        "zendframework/zend-hydrator": "Zend\\Hydrator component for using HydratingResultSets",
+        "zendframework/zend-servicemanager": "Zend\\ServiceManager component"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vuzen\\Db\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "files": [
+            "test/autoload.php"
+        ],
+        "psr-4": {
+            "VuzenTest\\Db\\": "test/unit",
+            "VuzenIntegrationTest\\Db\\": "test/integration"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev",
+            "dev-develop": "0.1-dev"
+        },
+        "zf": {
+            "component": "Vuzen\\Db",
+            "config-provider": "Vuzen\\Db\\ConfigProvider"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@test"
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit --colors=always --testsuite \"unit test\"",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+        "test-integration" : "phpunit --colors=always --testsuite \"integration test\"",
+        "upload-coverage": "coveralls -v"
+    }
+}
